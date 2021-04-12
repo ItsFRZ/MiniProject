@@ -1,0 +1,56 @@
+
+
+
+<app-menu></app-menu>
+
+<div class="container text-center mt-5">
+
+    <h1><span class="text-primary">Visitors Count</span> &nbsp; &nbsp;<span class="bold text-danger">{{counter}} &nbsp; <mat-icon><span class="material-icons-outlined text-primary">sentiment_satisfied_alt</span></mat-icon></span></h1>
+</div>
+
+<div class="container dataDesign mt-4">
+    <div class="row">
+      
+      
+        <div  *ngFor="let medData of MedicineData" class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-4">
+                    <br>
+                    <!-- <h2 class="text-end">❌</h2> -->
+                    <button (click)="deleteMedData(medData.id)"  mat-fab color="warn" aria-label="Example icon button with a home icon">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                    <div class="cardDesign">
+                        
+                        <div style="text-align: center;" >
+                            <img  id="img" class="img-fluid"  [src]="retrievedImage"  width="220px" height="120px" style="background: coral;">
+                        
+                        </div>
+
+                    <input class="iT" type="text"  value="Medicine Name :- {{medData.mname}}" disabled>
+                    
+
+                    <input class="iT" type="text"  value="Expiry Date :- {{medData.expDate}}" disabled>
+                    <textarea class="iT" style="resize: none;" rows="3" disabled>Description :- {{medData.description}}</textarea>
+                    <input class="iT" type="text"  value="Uploaded By :- {{medData.uploadedBy}}" disabled>
+                    <input class="iT" type="text"  value="Address :- {{medData.address}}" disabled>
+                    <input class="iT" type="text"  value="City :- {{medData.city}}" disabled>
+                        
+                        <div class="mt-2">
+                            <mat-card-actions>
+                                <button  class="btn-primary btnc"  mat-button><span class="material-icons">shopping_bag</span></button>&nbsp;
+                                <button  class="btn-warning btnc" mat-button><span class="material-icons">shopping_cart</span></button>
+                            </mat-card-actions>
+                        </div>
+
+                    </div>  
+                    <br>
+        </div>
+        
+
+    </div>
+  </div>
+
+<br>
+<p>console works!</p>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,65 @@
+<nav class="navbar nav-fit navbar-expand-lg  navbar-dark bg-primary">
+    <div class="container-fluid m-1">
+      <a class="navbar-brand" href="https://www.farazsheikh.ml/">ItsFRZ</a>
+      <button class="navbar-toggler"  (click)="isShown=!isShown" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse linkCenter navbar-collapse" [ngClass]="{ 'show': isShown }" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="../home" routerLinkActive="active">Home</a>
+          </li>
+
+          
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                City
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Nagpur</a></li>
+              <li><a class="dropdown-item" href="#">Pune</a></li>
+              <li><a class="dropdown-item" href="#">Mumbai</a></li>
+              <li><a class="dropdown-item" href="#">Nashik</a></li>
+            
+            </ul>
+          
+        </li>
+        
+        </ul>
+     
+        
+        <div class="lastButtons">
+            <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item">
+                <a *ngIf="this.hardCodedAuthenticationService.isUserLoggedIn()" class="nav-link justify-content-end" routerLink="../console" routerLinkActive="active" aria-current="page">Console</a>
+            </li>
+            
+            <li class="nav-item">
+              <a *ngIf="this.hardCodedAuthenticationService.isUserLoggedIn()" class="nav-link justify-content-end" routerLink="../logout" routerLinkActive="active" aria-current="page">Logout</a>
+           </li>
+          
+            
+              <li class="nav-item">
+                    <a *ngIf="!this.hardCodedAuthenticationService.isUserLoggedIn()" class="nav-link justify-content-end" routerLink="../login" routerLinkActive="active" aria-current="page">Login</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+
+        <form class="d-flex">
+          <input name="search" [(ngModel)]="search" class="form-control me-2 searchBar"  type="search" placeholder="Search Medicine Here ..." aria-label="Search">
+          &nbsp;<button (click)="onSearch()" class="btn text-white" mat-raised-button type="submit">Search</button>
+        </form>
+
+
+
+      </div>
+   
+    </div>
+ 
+  </nav>

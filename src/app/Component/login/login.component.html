@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+<div class="container">
+    <form class="mt-5">
+        <div class="form-group text-center">
+         
+          <input type="text" name="username" [(ngModel)]="username"  class="form-control text-center" placeholder="Email Id or Username" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group text-center mt-4">
+        
+          <input type="password" name="password" [(ngModel)]="password"  class="form-control text-center" placeholder="Password" id="exampleInputPassword1">
+        </div>
+
+        <div class="container text-center mt-4">
+             <button type="submit" (click)="onSubmit()" mat-raised-button color="primary" style="width: 30%;" class="btn btn-primary text-center">Login</button>
+        </div>
+
+        
+        <div *ngIf = "invalidLogin" class="container text-center mt-5">
+            <div class="alert alert-warning" role="alert">
+                <p style="font-weight: 600; font-size: 17px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">{{errorMessage}}</p>
+              </div>
+       </div>
+    
+    </form>
+</div>
+
+
+
+  
+<app-footer></app-footer>

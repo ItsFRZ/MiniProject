@@ -1,0 +1,122 @@
+
+<!-- Nav Bar -->
+
+<nav class="navbar nav-fit navbar-expand-lg  navbar-dark bg-primary">
+    <div class="container-fluid m-1">
+      <a class="navbar-brand" href="https://www.farazsheikh.ml/">ItsFRZ</a>
+      <button class="navbar-toggler"  (click)="isShown=!isShown" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse linkCenter navbar-collapse"  [ngClass]="{ 'show': isShown }" id="navbarSupportedContent">
+        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="../../home" routerLinkActive="active">Home</a>
+          </li>
+
+          
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                City
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Nagpur</a></li>
+              <li><a class="dropdown-item" href="#">Pune</a></li>
+              <li><a class="dropdown-item" href="#">Mumbai</a></li>
+              <li><a class="dropdown-item" href="#">Nashik</a></li>
+            
+            </ul>
+          
+        </li>
+        
+        </ul>
+
+        <div class="lastButtons">
+            <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item">
+                <a *ngIf="this.hardCodedAuthenticationService.isUserLoggedIn()" class="nav-link justify-content-end" routerLink="../../console" routerLinkActive="active" aria-current="page">Console</a>
+            </li>
+            
+            <li class="nav-item">
+              <a *ngIf="this.hardCodedAuthenticationService.isUserLoggedIn()" class="nav-link justify-content-end" routerLink="../../logout" routerLinkActive="active" aria-current="page">Logout</a>
+           </li>
+          
+            
+              <li class="nav-item">
+                    <a *ngIf="!this.hardCodedAuthenticationService.isUserLoggedIn()" class="nav-link justify-content-end" routerLink="../../login" routerLinkActive="active" aria-current="page">Login</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <form class="d-flex">
+          <input name="search" [(ngModel)]="search" class="form-control me-2 searchBar" type="search" placeholder="Search Medicine Here ..." aria-label="Search">
+          &nbsp;<button (click)="onSearch()" class="btn text-white" mat-raised-button type="submit">Search</button>
+        </form>
+        
+       
+
+
+      </div>
+   
+    </div>
+ 
+  </nav>
+
+
+
+  <!-- Received Data -->
+
+
+
+
+<div class="container dataDesign mt-4">
+    <div class="row">
+      
+      
+        <div  *ngFor="let medData of MedicineData" class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-4">
+                    <br>
+                    <div class="cardDesign">
+                    
+                        <div style="text-align: center;" >
+                            <img  id="img" class="img-fluid"  [src]="retrievedImage"  width="220px" height="120px" style="background: coral;">
+                        
+                        </div>
+
+                    <input class="iT" type="text"  value="Medicine Name :- {{medData.mname}}" disabled>
+                    
+
+                    <input class="iT" type="text"  value="Expiry Date :- {{medData.expDate}}" disabled>
+                    <textarea class="iT" style="resize: none;" rows="3" disabled>Description :- {{medData.description}}</textarea>
+                    <input class="iT" type="text"  value="Uploaded By :- {{medData.uploadedBy}}" disabled>
+                    <input class="iT" type="text"  value="Address :- {{medData.address}}" disabled>
+                    <input class="iT" type="text"  value="City :- {{medData.city}}" disabled>
+                        
+                        <div class="mt-2">
+                            <mat-card-actions>
+                                <button  class="btn-primary btnc"  mat-button><span class="material-icons">shopping_bag</span></button>&nbsp;
+                                <button  class="btn-warning btnc" mat-button><span class="material-icons">shopping_cart</span></button>
+                            </mat-card-actions>
+                        </div>
+
+                    </div>  
+                    <br>
+        </div>
+        
+
+    </div>
+  </div>
+
+<br><br><br>
+<div>
+    <app-footer></app-footer>
+</div>
+
+<!-- <div class="fabbtn">
+    <button mat-fab (click)="add()" color="primary">
+      <mat-icon><span class="material-icons">add</span></mat-icon>
+    </button>
+</div> -->
+
+<app-footer></app-footer>

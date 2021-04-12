@@ -1,0 +1,52 @@
+
+<app-menu></app-menu>
+
+
+
+<div class="container dataDesign mt-4">
+    <div class="row">
+      
+      
+        <div  *ngFor="let medData of MedicineData" class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-4">
+                    <br>
+                    <div class="cardDesign">
+                    
+                        <div style="text-align: center;" >
+                            <img  id="img" class="img-fluid"  [src]="retrievedImage"  width="220px" height="120px" style="background: coral;">
+                        
+                        </div>
+
+                    <input class="iT" type="text"  value="Medicine Name :- {{medData.mname}}" disabled>
+                    
+
+                    <input class="iT" type="text"  value="Expiry Date :- {{medData.expDate}}" disabled>
+                    <textarea class="iT" style="resize: none;" rows="3" disabled>Description :- {{medData.description}}</textarea>
+                    <input class="iT" type="text"  value="Uploaded By :- {{medData.uploadedBy}}" disabled>
+                    <input class="iT" type="text"  value="Address :- {{medData.address}}" disabled>
+                    <input class="iT" type="text"  value="City :- {{medData.city}}" disabled>
+                        
+                        <div class="mt-2">
+                            <mat-card-actions>
+                                <button  class="btn-primary btnc"  mat-button><span class="material-icons">shopping_bag</span></button>&nbsp;
+                                <button  class="btn-warning btnc" mat-button><span class="material-icons">shopping_cart</span></button>
+                            </mat-card-actions>
+                        </div>
+
+                    </div>  
+                    <br>
+        </div>
+        
+
+    </div>
+  </div>
+
+<br><br><br>
+<div>
+    <app-footer></app-footer>
+</div>
+
+<div class="fabbtn">
+    <button mat-fab (click)="add()" color="primary">
+      <mat-icon><span class="material-icons">add</span></mat-icon>
+    </button>
+</div>

@@ -1,0 +1,38 @@
+
+
+.searchWidth{
+    width : 70%;
+}
+
+.searchBar{
+    width: 560px;
+    color: #16A522;
+    font-weight: 200;
+}
+
+.lastButtons{
+    position: absolute; right: 0;
+}
+
+@media screen and (max-width: 995px) {
+
+    .searchBar{
+
+        width: 80%;
+        color: #16A522;
+        font-weight: 200;
+
+    }
+
+    .lastButtons{
+        position: relative;
+        text-align: center;
+        
+    }
+
+    .linkCenter{
+        text-align: center;
+    }
+    
+
+}

@@ -1,0 +1,47 @@
+<div class="backbg bg-primary">
+            
+        <!-- <div class="bg-primary">
+            <app-menu></app-menu>
+        </div> -->
+        <br><br>
+        <div class="divback bg-primary">
+            <form (ngSubmit)="onSubmit()" class="login bg-primary">
+                <h1 style="line-height: 1.3;">Add Medicine Data</h1>
+
+                <span class="form-input">
+                    <input type="file" (change)="onFileChanged($event)"  name="imgURL" accept="image/x-png,image/png,image/jpg,image/jpeg" placeholder="Image" >
+                </span>
+                <span class="form-input">
+                    <input type="text" [(ngModel)]="medData.mname" name="mname" placeholder="Enter Medicine Name">
+                </span>
+                
+                <span class="form-input">
+                    <input type="text"  [(ngModel)]="medData.description" name="description" placeholder="Description">
+                </span>
+
+                <span class="form-input">
+                    <input type="text" [(ngModel)]="medData.expDate" name="expDate" placeholder="Expiry Date {Example :- Jan 2025}">
+                </span>
+                <span class="form-input">
+                    <input type="text" [(ngModel)]="medData.address" name="address" placeholder="Address">
+                </span>
+            
+                <span class="form-input">
+                    <input type="text"  [(ngModel)]="medData.city" name="city" placeholder="City">
+                </span>
+
+                <span class="form-input">
+                    <input type="text"  [(ngModel)]="medData.uploadedBy" name="uploadedBy" placeholder="Your Name">
+                </span>
+                
+                
+
+                <div class="text-center">
+                    <button mat-raised-button type="submit" style="padding : 5px 10px; background-color: #1a8cff; color: white;" >Add</button>
+                </div>
+
+                <div class="box1"></div>
+                <div class="box2"></div>
+            </form>
+        </div>
+</div>

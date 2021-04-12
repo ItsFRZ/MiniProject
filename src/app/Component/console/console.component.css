@@ -1,0 +1,56 @@
+.dataDesign{
+    padding: 20px;
+    text-align: center;
+}
+
+#mname{
+    width: 50%;
+}
+#edate{
+    width: 30%;
+}
+
+.img{
+    width: 40%;
+    height: 70%;
+   
+}
+::selection{
+    background-color: red;
+}
+.iT{
+    padding: 1px;
+    margin: 5px 3px;
+    width : 220px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    color : darkblue;
+    border: none;
+}
+
+.cardDesign{
+    width: 250px;
+    height: 440px;
+    border: 1px solid lightblue;
+    padding: 10px;
+    text-align: center;
+    background-color: #80aaff;
+
+
+    background: rgba( 100, 129, 240, 0.85 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.btnc{
+    color : white;
+    margin: 1px 2px;
+}
+.fabbtn{
+    position: fixed;
+    top: 420px;
+    right : 2%;
+}
