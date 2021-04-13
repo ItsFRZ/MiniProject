@@ -12,8 +12,8 @@
 
           
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 City
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -23,8 +23,8 @@
               <li><a class="dropdown-item" href="#">Nashik</a></li>
             
             </ul>
-          
-        </li>
+
+        </li> -->
         
         </ul>
      
@@ -52,14 +52,31 @@
 
 
         <form class="d-flex">
-          <input name="search" [(ngModel)]="search" class="form-control me-2 searchBar"  type="search" placeholder="Search Medicine Here ..." aria-label="Search">
-          &nbsp;<button (click)="onSearch()" class="btn text-white" mat-raised-button type="submit">Search</button>
+          <input name="search"  [(ngModel)]="search" class="form-control me-2 searchBar"  type="search" placeholder="Search Medicine Here ..." aria-label="Search">
+          &nbsp;<button (click)="onSearch()"  class="btn text-white" mat-raised-button type="submit">Search</button>
         </form>
 
 
 
+        <select (change)="filter($event)" mat-raised-button aria-placeholder="Filter"  class="optionLayout btn form-select form-select-sm" aria-label=".form-select-sm example">
+          <option class="optionLinkLayout" disabled selected>Filter</option>
+          <option class="optionLinkLayout" value="">None</option>
+          <option class="optionLinkLayout" value="Nagpur">Nagpur</option>
+          <option class="optionLinkLayout" value="Pune">Pune</option>
+          <option class="optionLinkLayout" value="Mumbai">Mumbai</option>
+        </select>
+
+
+      
+
+
       </div>
    
+
+
     </div>
+
+
+   
  
   </nav>

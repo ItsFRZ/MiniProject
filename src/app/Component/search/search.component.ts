@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { from } from 'rxjs';
 import { MedData } from 'src/app/Classes/med-data';
 import { HardCodedAuthenticationService } from 'src/app/Services/hard-coded-authentication.service';
 import { MedDataService } from 'src/app/Services/med-data.service';
+import {FilterCityPipe} from '../../Pipes/filter-city.pipe';
 
 @Component({
   selector: 'app-search',
@@ -53,6 +54,17 @@ export class SearchComponent implements OnInit {
   onSearch(){
     this.getSearchData(this.search);
   }
+
+
+  selectCity : string = '';
+
+
+  filter(event){
+    this.selectCity = event.target.value;
+    console.log(this.selectCity);
+
+  }
+
 
 
 }

@@ -97,3 +97,32 @@
     
 
 }
+
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+    /* // remove the gap so it doesn't close */
+ }
+
+
+ .optionLayout{
+    
+     font-size: 14px;
+     font-weight: 200;
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;
+     background-color: #2597f7;
+
+ }
+
+
+ .optionLinkLayout{
+    color : blue;
+    margin: 1px 14px;
+    padding: 1px 13px;
+    background-color: white;
+
+ }

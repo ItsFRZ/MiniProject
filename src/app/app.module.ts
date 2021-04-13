@@ -20,6 +20,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ConsoleComponent } from './Component/console/console.component';
 import { LogoutComponent } from './Component/logout/logout.component';
 import { SearchComponent } from './Component/search/search.component';
+import { FilterCityPipe } from './Pipes/filter-city.pipe';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SearchComponent } from './Component/search/search.component';
     ErrorComponent,
     ConsoleComponent,
     LogoutComponent,
-    SearchComponent
+    SearchComponent,
+    FilterCityPipe
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { SearchComponent } from './Component/search/search.component';
     HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatIconModule,
     FormsModule,
     BrowserAnimationsModule,

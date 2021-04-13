@@ -6,7 +6,7 @@ import {MedData} from '../../Classes/med-data';
 import {MedImage} from '../../Classes/med-image';
 import {MedDataService} from '../../Services/med-data.service';
 import {MedImageService} from '../../Services/med-image.service';
-
+import {FilterCityPipe} from '../../Pipes/filter-city.pipe';
 
 
 @Component({
@@ -87,6 +87,12 @@ export class ListMedicineComponent implements OnInit {
   //     );
   // }
 
+
+ 
+  filteredCityData : string = '';
+  filteredData($event){
+    this.filteredCityData = $event;
+  }
 
 
 }
