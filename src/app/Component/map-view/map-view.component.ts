@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {DomSanitizer} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-map-view',
@@ -9,21 +9,15 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class MapViewComponent implements OnInit {
 
-  constructor(private route : ActivatedRoute,private domSanitizer : DomSanitizer) { }
+  constructor(private route : ActivatedRoute) { }
 
   btnStyle : string;
   
   fetchedAddress : string;
   
-  baseURL = "https://www.google.com/maps/embed/v1/place?q=[address]&key=AIzaSyBhRrwlBpffnOsGqkyHbqEoJ7DVb_JT3bI";
 
+  
 
-  // https://www.google.com/maps/embed/v1/place?q=fetchedAddress&key=AIzaSyBhRrwlBpffnOsGqkyHbqEoJ7DVb_JT3bI
-
-  methodToGetURL(){
-
-  return this.domSanitizer.bypassSecurityTrustResourceUrl(this.baseURL);
-  }
 
   ngOnInit(): void {
     

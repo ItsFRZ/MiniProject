@@ -16,5 +16,10 @@ export class MedImageService {
     return this.httpClient.get<MedImage[]>(`${this.baseURL1}`);
   }
 
+
+  getMedImageDataByid(id:number) :Observable<MedImage>{
+    return this.httpClient.get<MedImage>(`${this.baseURL1}/p${id}`);
+  }
+
 }
 

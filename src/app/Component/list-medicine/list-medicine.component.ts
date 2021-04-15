@@ -34,7 +34,9 @@ export class ListMedicineComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData();
-    this.getImageData();
+    // this.getImageData();
+    this.getImage();
+
   
   }
 
@@ -46,20 +48,23 @@ export class ListMedicineComponent implements OnInit {
   }
 
   
-   getImageData() {
-    //Make a call to Sprinf Boot to get the Image Bytes.
-    this.httpClient.get('http://localhost:8082/api/umed')
-      .subscribe(
-        res => {
-          this.retrieveResonse = res;
-          this.base64Data = this.retrieveResonse.picByte;
-          this.retrievedImage = 'data:image/jpeg;base64,' + this.base64Data;
+
+
+
+  //  getImageData() {
+  //   //Make a call to Sprinf Boot to get the Image Bytes.
+  //   this.httpClient.get('http://localhost:8082/api/umed')
+  //     .subscribe(
+  //       res => {
+  //         this.retrieveResonse = res;
+  //         this.base64Data = this.retrieveResonse.picByte;
+  //         this.retrievedImage = 'data:image/jpeg;base64,' + this.base64Data;
        
-        }
-      );
+  //       }
+  //     );
   
-      // console.log(this.retrievedImage);
-    }
+  //     // console.log(this.retrievedImage);
+  //   }
 
 
   
@@ -73,19 +78,13 @@ export class ListMedicineComponent implements OnInit {
 
 
 
-  //  //Gets called when the user clicks on retieve image button to get the image from back end
-  //  getImage() {
-  //   //Make a call to Sprinf Boot to get the Image Bytes.
-  //   this.httpClient.get('http://localhost:8082/api/umed')
-  //     .subscribe(
-  //       res => {
-  //         // this.retrieveResonse = res;
-  //         // this.base64Data = this.retrieveResonse.picByte;
-  //         // this.retrievedImage = 'data:image/jpeg;base64,' + this.base64Data;
-       
-  //       }
-  //     );
-  // }
+   //Gets called when the user clicks on retieve image button to get the image from back end
+   getImage() {
+    //Make a call to Sprinf Boot to get the Image Bytes.
+    this.medImageService.getMedImageData().subscribe(
+      data => {this.MedicineImageData = data}
+    );
+  }
 
 
  
@@ -99,6 +98,6 @@ export class ListMedicineComponent implements OnInit {
   // Medicine Details
   medicineDetails(id : number){
 
-    this.router.navigate(['details',id])
+    this.router.navigate(['details',id]);
   }
 }

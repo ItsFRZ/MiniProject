@@ -12,9 +12,12 @@
         <div  *ngFor="let medData of MedicineData | filterCity:filteredCityData" class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-4">
                     <br>
                     <div class="cardDesign">
-                    
+                        
+                        <!-- let medImage of MedicineImageData;
+                            {{'data:image/jpg;base64,' + imagePath}}
+                        -->
                         <div style="text-align: center;" >
-                            <img  id="img" class="img-fluid"  [src]="retrievedImage"  width="220px" height="120px" style="background: coral;">
+                            <img  id="img" class="img-fluid imgglass" src="../../../assets/med.png" width="220px" height="120px" >
                         
                         </div>
 

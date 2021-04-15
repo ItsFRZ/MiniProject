@@ -35,6 +35,9 @@
     }
     
 
+    .selectData{
+        margin: 0 auto;
+    }
 }
 
 
@@ -51,6 +54,7 @@
      font-weight: 200;
      font-family: Arial, Helvetica, sans-serif;
      color: white;
+   
      background-color: #2597f7;
 
  }
@@ -60,6 +64,13 @@
     color : blue;
     margin: 1px 14px;
     padding: 1px 13px;
+    border: 1px solid blue;
     background-color: white;
 
  }
+
+
+
+.selects{
+    border: none;
+}

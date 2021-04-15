@@ -57,14 +57,18 @@
         </form>
 
 
+        <div class="selectData" style="width: 150px;">
 
-        <select (change)="filter($event)" mat-raised-button aria-placeholder="Filter"  class="optionLayout btn form-select form-select-sm" aria-label=".form-select-sm example">
-          <option class="optionLinkLayout" disabled selected>Filter</option>
-          <option class="optionLinkLayout" value="">None</option>
-          <option class="optionLinkLayout" value="Nagpur">Nagpur</option>
-          <option class="optionLinkLayout" value="Pune">Pune</option>
-          <option class="optionLinkLayout" value="Mumbai">Mumbai</option>
-        </select>
+          
+            <select (change)="filter($event)" mat-raised-button aria-placeholder="Filter" style="width: 150px;" class="selects btn btn-primary">
+              <option class="optionLinkLayout optionS" disabled selected>Filter</option>
+              <option class="optionLinkLayout optionS" value="">None</option>
+              <option class="optionLinkLayout optionS" value="Nagpur">Nagpur</option>
+              <option class="optionLinkLayout optionS" value="Pune">Pune</option>
+              <option class="optionLinkLayout optionS" value="Mumbai">Mumbai</option>
+            </select>
+
+        </div>
 
 
       

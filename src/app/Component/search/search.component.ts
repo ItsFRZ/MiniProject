@@ -67,4 +67,9 @@ export class SearchComponent implements OnInit {
 
 
 
+
+  medicineDetails(id : number){
+    this.router.navigate(['details',id]);
+  }
+
 }

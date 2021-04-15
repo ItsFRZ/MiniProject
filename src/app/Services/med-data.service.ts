@@ -10,7 +10,7 @@ import { MedData } from '../Classes/med-data';
 export class MedDataService {
 
   private baseURL = "http://localhost:8082/api/med";
-  private baseURL1 = "http://localhost:8082/api/umed";
+ 
 
   constructor(private httpClient : HttpClient) { }
 

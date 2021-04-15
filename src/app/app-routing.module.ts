@@ -16,7 +16,11 @@ const routes: Routes = [
   
   {path : '' ,redirectTo : 'home', pathMatch : 'full'},
   {path : 'home' , component : HomeComponent}, 
-  {path : 'map/:data' , component : MapViewComponent}, 
+  {path : 'details/home', redirectTo : 'home' , pathMatch : 'full' },
+  {path : 'details/login', redirectTo : 'login' , pathMatch : 'full' },
+  {path : 'details/console', redirectTo : 'console' , pathMatch : 'full' },
+  {path : 'details/logout', redirectTo : 'logout' , pathMatch : 'full' },
+  {path : 'map' , component : MapViewComponent}, 
   {path : 'store' , component : ListMedicineComponent},
   {path : 'login' , component : LoginComponent},
   {path : 'logout' , component : LogoutComponent , canActivate : [RouteGuardService]},

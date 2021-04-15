@@ -1,15 +1,62 @@
 <app-menu></app-menu>
 
+<!-- Menu -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <p>med-details works!</p> -->
 
 
-<div class="container" [ngClass]="[btnStyle]">
+<div class="container" [ngClass]="[btnStyle]" class="container justify-content-center glassLayout">
       
   <!-- <div class="example-button-container" style="text-align: end;">
     <button (click)="mapOff()" mat-fab color="warn" aria-label="Example icon button with a home icon">
       <mat-icon>close</mat-icon>
     </button>
   </div> -->
+
+
+  <div>
+
+ 
+
+
+    <div class="gfg">
+      <!-- <button class="btn-primary btnc text-center" mat-button><span
+        class="material-icons">closed</span></button> -->
+    
+        
+    
+      <div class="card">
+      
+        <div class="content">
+          <h2 class="styleText">Address</h2>
+          <!-- <p>{{medData.address}} {{medData.city}}</p> -->
+          <iframe  src="https://www.google.com/maps/embed/v1/place?q=Nagpur&key=AIzaSyBhRrwlBpffnOsGqkyHbqEoJ7DVb_JT3bI"
+              
+            class="iframeLayout" style="border:0;" allowfullscreen="" ></iframe>
+       
+          </div>
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  
+  
+
 
   <div class="container mt-5">
 
@@ -18,7 +65,7 @@
         <mat-icon>close</mat-icon>
       </button>
     </div>
-    <app-map-view></app-map-view>
+    <!-- <app-map-view></app-map-view> -->
 
   </div>
 
@@ -47,7 +94,7 @@
 
   <div class="row">
     <div class="containerGrid dataLayout col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
-      <img src="https://images.indianexpress.com/2021/04/remdesevir.jpg" class="img-fluid rounded imgSize"
+      <img src="{{'data:image/jpg;base64,' + medImage.picByte}}" class="img-fluid rounded imgSize"
         alt="Responsive image">
     </div>
     <div class="containerGrid1 dataLayout col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
