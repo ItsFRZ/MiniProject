@@ -28,6 +28,10 @@ export class MedDataService {
   }
 
 
+  getMedDataByid(id:number) :Observable<MedData>{
+    return this.httpClient.get<MedData>(`${this.baseURL}/p${id}`);
+  }
+
   getDataByMedName(medname : string) : Observable<MedData[]>{
     return this.httpClient.get<MedData[]>(`${this.baseURL}/${medname}`);
   }

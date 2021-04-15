@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+
+<!-- <p>med-details works!</p> -->
+
+
+<div class="container" [ngClass]="[btnStyle]">
+      
+  <!-- <div class="example-button-container" style="text-align: end;">
+    <button (click)="mapOff()" mat-fab color="warn" aria-label="Example icon button with a home icon">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div> -->
+
+  <div class="container mt-5">
+
+    <div class="container-fluid customButton" style="text-align: end;">
+      <button (click)="mapOff()" mat-fab color="warn" aria-label="Example icon button with a home icon">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <app-map-view></app-map-view>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="detailsLayout container-fluid">
+
+  <div class="row">
+    <div class="containerGrid dataLayout col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+      <img src="https://images.indianexpress.com/2021/04/remdesevir.jpg" class="img-fluid rounded imgSize"
+        alt="Responsive image">
+    </div>
+    <div class="containerGrid1 dataLayout col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+
+
+      <div class="container containLayout">
+        <h2 class="styleText">{{medData.description}}</h2>
+        <h3 class="styleText">Medicine Name :- {{medData.mname}}</h3>
+        <h3 class="styleText">Uploaded By :- {{medData.uploadedBy}} </h3>
+        <h3 class="styleText">Address :- {{medData.address}}     </h3>
+        <h3 class="styleText">City    :- {{medData.city}}      </h3>
+        <h3 class="styleText">Expiry Date :- {{medData.expDate}}  </h3>
+      </div>
+
+      <div style="text-align: center;">
+        <button (click)="mapOn()" class="btn-primary btnc" mat-button><span
+            class="material-icons">location_on</span></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>

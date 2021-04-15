@@ -95,4 +95,10 @@ export class ListMedicineComponent implements OnInit {
   }
 
 
+
+  // Medicine Details
+  medicineDetails(id : number){
+
+    this.router.navigate(['details',id])
+  }
 }

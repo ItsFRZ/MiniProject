@@ -22,6 +22,8 @@ import { LogoutComponent } from './Component/logout/logout.component';
 import { SearchComponent } from './Component/search/search.component';
 import { FilterCityPipe } from './Pipes/filter-city.pipe';
 import {MatSelectModule} from '@angular/material/select';
+import { MedDetailsComponent } from './Component/med-details/med-details.component';
+import { MapViewComponent } from './Component/map-view/map-view.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatSelectModule} from '@angular/material/select';
     ConsoleComponent,
     LogoutComponent,
     SearchComponent,
-    FilterCityPipe
+    FilterCityPipe,
+    MedDetailsComponent,
+    MapViewComponent
   ],
   imports: [
     BrowserModule,
