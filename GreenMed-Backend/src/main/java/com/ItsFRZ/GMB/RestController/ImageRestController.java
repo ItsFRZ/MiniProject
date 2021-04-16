@@ -11,6 +11,7 @@ import java.util.zip.Inflater;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.RequestEntity.BodyBuilder;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -34,12 +35,12 @@ public class ImageRestController {
 	@Autowired
 	ImageRepository imageRepository;
 
-	@PostMapping("/umed")
+	@PostMapping(value = "/umed", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public org.springframework.http.ResponseEntity.BodyBuilder uplaodImage(@RequestParam("imageFile") MultipartFile file) throws IOException {
 
 		System.out.println("Original Image Byte Size - " + file.getBytes().length);
 		ImageModel img = new ImageModel(file.getOriginalFilename(), file.getContentType(),
-				Base64.getEncoder().encode(file.getBytes()).toString());
+				Base64.getEncoder().encodeToString(file.getBytes()));
 		imageRepository.save(img);
 		return ResponseEntity.status(HttpStatus.OK);
 	}

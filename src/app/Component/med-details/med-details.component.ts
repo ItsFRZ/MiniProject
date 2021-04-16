@@ -4,6 +4,7 @@ import { MedImage } from 'src/app/Classes/med-image';
 import { MedDataService } from 'src/app/Services/med-data.service';
 import { MedImageService } from 'src/app/Services/med-image.service';
 import {MedData} from '../../Classes/med-data';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -13,7 +14,7 @@ import {MedData} from '../../Classes/med-data';
 })
 export class MedDetailsComponent implements OnInit {
 
-  constructor(private router : Router,private route : ActivatedRoute,private medDataService : MedDataService,private medImageService : MedImageService) { 
+  constructor(public domSanitizer : DomSanitizer ,private router : Router,private route : ActivatedRoute,private medDataService : MedDataService,private medImageService : MedImageService) { 
 
 
  
@@ -28,6 +29,7 @@ export class MedDetailsComponent implements OnInit {
     this.btnStyle = "masterHideDefault";
     // console.log(this.btnStyle);
     this.fetchMedObject();
+    
   }
 
   
@@ -48,6 +50,8 @@ export class MedDetailsComponent implements OnInit {
   medData : MedData; 
   medImage : MedImage;
 
+  imageURL :String = '';
+
   fetchMedObject(){
 
     this.id = this.route.snapshot.params['id'];
@@ -55,7 +59,9 @@ export class MedDetailsComponent implements OnInit {
 
     this.medImage = new MedImage();
     this.medImageService.getMedImageDataByid(this.id).subscribe(
-      data => {this.medImage = data}
+      data => {this.medImage = data,
+        console.log(this.medImage.picByte);}
+      
     );
 
     this.medData = new MedData();
@@ -83,9 +89,16 @@ export class MedDetailsComponent implements OnInit {
   
   }
 
+
+  imageNameFunc(){
+    return this.imageURL = this.medImage.picByte;
+  }
+
   // src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhRrwlBpffnOsGqkyHbqEoJ7DVb_JT3bI&q={{medData.address}}+{{medData.city}}"
       
-  
-  
+
+  // {{'data:image/jpg;base64,' + medImage.picByte}}
+ 
+ 
 
 }

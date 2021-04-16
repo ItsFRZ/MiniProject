@@ -24,6 +24,7 @@ import { FilterCityPipe } from './Pipes/filter-city.pipe';
 import {MatSelectModule} from '@angular/material/select';
 import { MedDetailsComponent } from './Component/med-details/med-details.component';
 import { MapViewComponent } from './Component/map-view/map-view.component';
+import { SafeHtmlPipe } from './Pipes/safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MapViewComponent } from './Component/map-view/map-view.component';
     SearchComponent,
     FilterCityPipe,
     MedDetailsComponent,
-    MapViewComponent
+    MapViewComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
