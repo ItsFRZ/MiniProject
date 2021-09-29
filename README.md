@@ -1,10 +1,10 @@
 <h1 align="center">GreenMed</h1>    
-<h3 align="center">Client + Server</h3> 
+<h2 align="center">Client + Server</h2> 
 
 
-<div style="margin : 0px auto;">
+<div align="center">
 
-<h4 align="center">Mobile View</h4> 
+<h3 align="center">Mobile View</h3> 
 
 ![p3](https://user-images.githubusercontent.com/61186175/135245024-ec6e770e-ea73-4116-857d-09eba66c5840.png) ![p4](https://user-images.githubusercontent.com/61186175/135245029-d72d2104-6a7f-4c31-b2d7-5fc720947715.png) ![p5](https://user-images.githubusercontent.com/61186175/135245035-346797ad-8025-4228-830f-7c26d1ee9cf3.png)
  <br>
@@ -17,7 +17,7 @@
 
 <div style="margin : 0px auto;">
 
-<h4 align="center">Web View</h4> 
+<h3 align="center">Web View</h3> 
 
   ![Capture2](https://user-images.githubusercontent.com/61186175/135246461-32ee963d-1f89-4e08-88c9-fde2c0b18e50.PNG) 
 
@@ -57,8 +57,21 @@
 
 
 
+<h3 align="center">License</h3>
 
-<h6 align="center">Angular Installation Guide</h6>
+```
+Copyright [2021] [Faraz Sheikh]
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+  
+     http://www.apache.org/licenses/LICENSE-2.0
+     
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+  
+```
+
+
+<h3 align="center">Angular Installation Guide</h3>
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
